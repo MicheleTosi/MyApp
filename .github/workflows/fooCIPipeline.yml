@@ -1,10 +1,10 @@
 name: GitHub Actions Demo
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
-on: [push]
-jobs:
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀 #chi ha lanciato la pipeline
+on: [push] #on evento scatenante (in questo caso la pipeline viene attivata goni volta che viene fatta la push sul sistema)
+jobs: #vengono eseguiti i seguenti job
   Explore-GitHub-Actions:
-    runs-on: ubuntu-latest
-    steps:
+    runs-on: ubuntu-latest #lanciato sulla macchina con l'ultima immagine di ubuntu
+    steps: #passi che vengono eseguiti una volta che viene creata la macchina virtuale, tra {{}} si hanno le variabili 
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
       - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
       - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
